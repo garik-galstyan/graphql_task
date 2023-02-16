@@ -8,5 +8,6 @@ import { OwnerModule } from '../owner/owner.module';
 @Module({
   providers: [PetService, PetResolver],
   imports: [CatModule, DogModule, OwnerModule],
+  exports: [PetService],
 })
 export class PetModule {}

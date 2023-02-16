@@ -7,7 +7,7 @@ export class CatResolver {
   constructor(private catService: CatService) {}
 
   @Query(() => [Cat], { name: 'cat' })
-  async getCats(@Args('name') name: string) {
+  getCats(@Args('name') name: string) {
     return this.catService.getCatsByName(name);
   }
 }
