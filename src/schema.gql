@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+interface Pet {
+  id: Int!
+  name: String!
+  owner: Owner!
+}
+
+type Owner {
+  id: Int!
+  name: String!
+}
+
+type Cat implements Pet {
+  id: Int!
+  name: String!
+  owner: Owner!
+}
+
+type Dog implements Pet {
+  id: Int!
+  name: String!
+  owner: Owner!
+}
+
+type Query {
+  pet(name: String!): [Pet!]!
+  cat(name: String!): [Cat!]!
+  dog(name: String!): [Dog!]!
+}
